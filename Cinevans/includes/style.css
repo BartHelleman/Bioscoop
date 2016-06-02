@@ -1,0 +1,592 @@
+
+
+* {
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+/* general */
+a {
+	color:#333;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#111;
+	text-decoration:none;
+}
+
+/* body */
+body {
+	background:#ffffff;
+	color:#555;
+	font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* header */
+
+#header_container {
+	width: 100%;
+	background: #f2f2f2;
+	margin-top: -15px;
+}
+#header {
+	margin-top: -15px;
+	padding: 20px 0px;
+	margin:0 auto;
+	width:960px;
+}
+
+#header h1 {
+	color:#888;
+	font-size:300%;
+	letter-spacing:-3px;
+	text-align:right;
+	margin-bottom:-20px;
+}
+
+#header h2 {
+	color:#CCC;
+	font-size:200%;
+	letter-spacing:-2px;
+	text-align:right;
+}
+
+#navigation_container {
+	width: 100%;
+	background: #262626;
+	height: 40px;
+	border-bottom: 2px solid #FA3C09;
+}
+
+#left_sidebar_container {
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	width: 215px;
+	padding: 10px;
+	margin-top: 10px;
+	float: left;
+}
+
+#left_sidebar_filter {
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	width: 215px;
+	padding: 10px;
+	margin-top: 15px;
+	float: left;
+	clear: both;
+}
+
+#navigation {
+	margin:0 auto;
+	width:960px;
+	height:40px;
+	list-style:none;
+	background: #262626;
+	border-bottom: 2px solid #FA3C09;
+}
+
+
+#adminnav {
+	margin:0 auto;
+	width:918px;
+	list-style:none;
+	border-radius: 5px;
+	border: 1px solid #cacaca;
+	padding: 10px 20px 20px;
+	border-bottom: 2px solid #FA3C09;
+	margin-bottom: 30px;
+}
+
+#adminnav a:hover {
+	color: #FA3C09;
+}
+
+#admin li.selected a {
+	color: #FA3C09;
+}
+
+li.active {
+	color: #FA3C09;
+}
+
+#adminnav li {
+	float:left;
+	width:149px;
+	list-style:none;
+}
+
+#navigation li {
+	float:left;
+	width:149px;
+	list-style:none;
+}
+
+#navigation a {
+	color:#fff;
+	display:block;
+	line-height:40px;
+	text-align:center;
+}
+
+#navigation a:hover {
+    background: #FA3C09;
+	color:#fff;
+}
+
+#navigation .active {
+	background: #FA3C09;
+	color:#777;
+	font-weight: bold;
+}
+
+#menu {
+	float: right;
+	margin-top: -50px;
+	padding: 5px;
+}
+
+#menu a {
+	color: #555;
+	text-decoration:underline
+}
+ 
+/* content */
+#content {
+	margin: 0 auto;
+	padding: 0 0 20px;
+	width: 960px;
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#content h1 {
+	fonmargin-t-size:1.8em;
+}
+
+#content p {
+	padding:10px 0px 0;
+	font-size: 14px;
+}
+
+
+/* SLIDER & USP's HOME */
+
+#slideshow { 
+	position: relative; 
+	max-width: 717px; 
+	max-height: 250px;
+	clear:both;
+	float: left;
+	border-radius: 5px !important;
+}
+	
+		
+#slideshow div { 
+	position: absolute; 
+	top: 0px; 
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	border-radius: 5px !important;
+}
+
+.slideshow-item {
+	border-radius: 5px !important;
+}
+		
+#usp {
+	width: 190px;
+	height: 209px;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 5px;
+	float: right;
+	border: 1px solid #ddd;
+	float: right;
+}
+
+
+.usp-item {
+	list-style-type: none;
+	margin: 5px 0;
+	float: left;
+	display: block;
+}
+
+#slider_container {
+	margin-bottom: 20px;
+	height: 250px;
+}
+/* ---------------------- producten ----------------------------- */
+
+#product {
+	padding: 12px;
+	border-radius: 5px;
+	width: 200px;
+	border: 1px solid #ddd;
+	float: left;
+	margin-right: 14px;
+	height: 295px;
+	max-height: 295px;
+	margin-top: 15px;
+	position: relative;
+}
+
+#product-right {
+	padding: 12px;
+	border-radius: 5px;
+	width: 200px;
+	border: 1px solid #ddd;
+	float: left;
+	margin-left: 14px;
+	height: 295px;
+	max-height: 295px;
+	margin-BOTTOM: 15px;
+	position: relative;
+}
+
+#productimage {
+	width: 200px;
+	border-radius: 5px;
+	max-height: 150px;
+}
+
+#prodnummer, #prodnaam, #beschrijving, #prijs {
+	padding: 5px;
+	margin: 2px 0;
+}
+
+#prodnummer {
+	height: 20px;
+	width: 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+#producttitle {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+#prodnaam {
+	font-size: 1.3em;
+	width: 150px;
+}
+
+#prijs {
+	float: left;
+	font-size: 1.4em;
+}
+
+#tags {
+	float: left;
+	margin-bottom: 10px;
+	clear: both;
+}
+
+#voorraad, #leverbaar {
+
+}
+
+#beschrijving {
+	float: left;
+}
+
+#selecteer {
+	padding: 5px 0px;
+	margin-top: 15px;
+	background-color: #262626;
+	color: #fff;
+	overflow: auto;
+	border-radius: 5px;
+	clear: both;
+}
+
+.product_text {
+	border: 1px solid #CACACA;
+	padding: 32px 10px;
+	border-radius: 5px;
+}
+
+#product_info {
+	width: 707px;
+	float: right;
+}
+
+#producten_container {
+	width: 720px;
+	float: right;
+	display: block;
+}
+
+.producten_gevonden {
+	padding-left: 25px;
+	padding-bottom: 8px;
+}
+
+#product_selectie  a {
+	color: #fff;
+	font-weight: bold;
+	width: 190px;
+	background: #333;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 6px;
+	clear: both;
+	display: block;
+	position: absolute;
+	bottom: 10px;
+
+}
+
+#product_selectie  a:hover {
+	background: #FA3C09;
+}
+
+/* ---------------------- productdetail ----------------------------- */
+#productdetail {
+	padding: 5px;
+	width: 450px;
+	border: 1px solid #ddd;
+	float: right;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#omschrijving, #console, #prijs, #voorraad, #conditie {
+	float: left;
+	clear: both;
+	margin: 5px 0;
+}
+
+#productdetail_img {
+	width: 450px;
+	float: left;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+#product_usp {
+	clear: both;
+}
+.usp_icon {
+	margin-top: 5px;
+}
+.usp_text {
+	display: inline;
+	margin-left: 10px;
+}
+
+#verderwinkelen_button a {
+	color: #fff;
+	background: #333;
+	border-radius: 5px;
+	padding: 15px 60px;
+	color: #fff;
+	width: 92px;
+	display: block;
+}
+
+#leegmaken_button a {
+	color: #fff;
+	background: #333;
+	border-radius: 5px;
+	padding: 15px 33px;
+	color: #fff;
+	width: 145px;
+	display: block;
+}
+
+#afrekenen_button a {
+	color: #fff;
+	background: #333;
+	border-radius: 5px;
+	padding: 15px 75px;
+	color: #fff;
+	width: 62px;
+	display: block;
+}
+
+/* ---------------------- footer ----------------------------- */
+#footer_usp {
+width: 960px;
+margin-top: 30px;
+clear: both;
+display: block;
+}
+
+#footer {
+	margin:0 auto;
+	padding:10px;
+	text-align:center;
+	width: auto;
+	background: #262626;
+	color: #fff;
+	clear: both;
+	display: block;
+}
+
+#footer a {
+	color: #fff;
+}
+
+#footer a:hover {
+	color: #FA3C09;
+}
+
+#links, #rechts {
+	padding: 3px;
+}
+
+#links {
+	width: 150px;
+}
+	
+#rechts {
+	width: 250px;
+}
+
+.error, .ad {
+	font-weight: bold;
+	color: #C00;
+}
+
+input, select, .input {
+	padding: 4px;
+	margin: 0 5px;
+	font-weight: bold;
+	font-size: 0.9em;
+	color: #444;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #333;
+}
+
+.button {
+    background: #FA3C09;
+	float: right;
+	color: #fff;
+}
+
+table, td, th {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-size: 1.0em;
+}
+
+table 
+{
+	width: 80%;
+	margin: 20px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+th {
+	background-color: #eee;
+	color:	black;
+	height: 20px;
+	padding: 5px;
+}
+
+td {
+	height: 25px;
+	vertical-align: bottom;
+	padding: 5px;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+/* -------------------------------- */
+
+.errorlist, .error input{
+	border: 1px solid red;
+	background: #fdd;
+}
+.errorlist {
+	width: 70%;
+	margin: 10px;
+	padding: 4px;
+}
+
+form.formulier fieldset {
+
+}
+
+#bestaande_klant {
+	float: left;
+	margin-top: 20px;
+	border: 1px solid #aaa;
+	width: 430px;
+	border-radius: 5px;
+	padding: 10px;
+	height: 140px;
+}
+
+#nieuwe_klant {
+	float: right;
+	width: 430px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	padding: 10px;
+	height: 140px;
+	margin-top: 20px;
+}
+
+form.formulier legend {
+	padding: 0 2px;
+	font-weight: bold;
+}
+form.formulier label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+}
+form.formulier fieldset ol {
+	margin: 0;
+	padding: 0;
+}
+form.formulier fieldset li {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+}
+form.formulier em {
+	font-weight: bold;
+	font-style: normal;
+	color: #f00;
+}
+form.formulier label {
+	width: 120px; /* Width of labels */
+}
+
+#wachtwoord {
+	margin-top: 10px;
+}
+
+.wachtwoord_vergeten {
+	float: right;
+}
+
+.button2 {
+	background: #FA3C09;
+	border-radius: 5px;
+	border: #333;
+	padding: 10px;
+	color: #fff;
+	float: left;
+}
+/* -- Contact pagina css hieronder -- */
+iframe[Attributes Style] {
+width: 720px;
+height: 253px;
+border-radius: 5px;
+}

@@ -1,0 +1,84 @@
+﻿<?php session_start(); ?>
+<html>
+<head>
+<title><?php echo $page_title; ?></title>	
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+<meta charset="UTF-8">
+<script type="text/javascript">
+<!--
+function logOut() {
+	var answer = confirm ('Weet je zeker dat je wilt uitloggen?')
+	if (answer)
+		window.location="logout.php";
+}
+//-->
+</script>
+</head>
+<body>
+<div id="header_container">
+<div id="header">
+<a href="index.php"><img src="images/logo2.png"></a>
+<h2></h2>
+
+
+
+<?php
+	// Toon de inhoud van je winkelwagen en de naam van de gebruiker linksboven in header.
+	echo "<ul id='menu'>\n";
+
+	// Een gebruiker/admin is ingelogd wanneer $_SESSION['klantnr'] / $_SESSION['Emailadres'] een waarde heeft (niet leeg is).
+	// Hier wordt gecontroleerd of de sessie een admin is zo ja volgt dit:
+	
+	if (isset($_SESSION['Emailadres']) && !empty($_SESSION['Emailadres'])) {
+	echo "Welkom Admin, <a href=\"adminbeheer.php\">Adminpaneel</a> | <a href=\"logout.php\">Uitloggen</a>";
+	
+	// Hier wordt gecontroleerd of de sessie een gebruiker is, zo ja volgt dit:
+	
+	} elseif (isset($_SESSION['klantNr']) && !empty($_SESSION['klantNr'])) {
+		echo "Welkom, <a href=\"account.php\">".$_SESSION['Voornaam']."</a> | <a href=\"logout.php\">Uitloggen</a>";
+		
+	// Hier tonen we het aantal producten in de winkelwagen, en een link om direkt af te rekenen.
+	// Kijk of er iets in de winkelwagen zit
+	if (empty($_SESSION['cart'])) {
+		echo "<li>Winkelwagen is leeg</li>\n";
+	} else {
+		// 'explode' zorgt dat de session - een string - gescheiden wordt op het gegeven teken.
+		// De session bevat de productinformatie, gescheiden per '|'.
+		$cart2 = explode("|",$_SESSION['cart']);
+
+		// Tellen inhoud winkelwagen
+		$count = count($cart2);
+		if ($count == 1) {
+			echo "<li>1 product ";
+		} else {
+			echo "<li>".$count." producten ";
+		}
+		echo "in <a href=\"cart.php\">winkelwagen</a> | <a href=\"checkout.php\">afrekenen</a></li>\n";
+	}
+	echo("</ul>");
+
+	// Hier kijken we of er een actief menu-item is. Zo niet, dan 0.
+	if (!isset($active)) $active = 0;
+	
+	// Wanneer niet ingelogd volgt dit: (Default)	
+	} else {
+		echo "<li>U bent niet ingelogd | <a href=\"login.php\">Login</a></li>\n";
+	}
+	
+?>
+</div>
+<div id="navigation_container"> 
+<div id="navigation">
+<ul>
+<li<?php if ($active =="1") {?> class="active"<?php } ?>><a href="index.php">Home</a></li>
+<li<?php if ($active =="2") {?> class="active"<?php } ?>><a href="nintendo64.php">Nintendo 64</a></li>
+<li<?php if ($active =="3") {?> class="active"<?php } ?>><a href="supernintendo.php">Super Nintendo</a></li>
+<li<?php if ($active =="4") {?> class="active"<?php } ?>><a href="gamecube.php">Gamecube</a></li>
+<li<?php if ($active =="5") {?> class="active"<?php } ?>><a href="contact.php">Contact</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<div id="content">
+<!-- Begin van de pagina-specifieke content. -->
